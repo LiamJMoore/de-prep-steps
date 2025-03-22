@@ -2,7 +2,7 @@
 
 ## 1
 
-- Use the command `echo` to print a message `hello <your-name>` to the terminal.
+- Use the command `echo` to print oajdojdojda message `hello <your-name>` to the terminal.
 
 ## 2
 
