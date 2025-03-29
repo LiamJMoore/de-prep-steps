@@ -19,9 +19,11 @@ get_even_nums([1, 2, 3]) # returns [2]
 
 
 def get_even_nums(nums):
-    # your code here
-    pass
-
+    even_nums = []  # Initialize an empty list to store even numbers
+    for num in nums:  # Iterate through each number in the input list
+        if num % 2 == 0:  # Check if the number is even
+            even_nums.append(num)  # Add even number to the list
+    return even_nums
 
 @run_test
 def get_even_nums_should_return_empty_list_when_no_numbers():
