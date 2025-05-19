@@ -27,12 +27,7 @@ Please refactor `create_greeting_strings` to use a **list comprehension**.
 """
 
 def create_greeting_strings(names):
-    greeting = []
-
-    for name in names:
-        greeting.append(f"Hello {name}!")
-
-    return greeting
+    return [f"Hello {name}!" for name in names ]
 
 
 @run_test
@@ -42,14 +37,14 @@ def test_create_greeting_strings_return_empty_list():
     )
 
 
-@skip_test
+@run_test
 def test_create_greeting_strings_greets_single_name_in_list():
     assert create_greeting_strings(["Danika"]) == [
         "Hello Danika!"
     ], format_err_msg("Hello Danika!", create_greeting_strings(["Danika"]))
 
 
-@skip_test
+@run_test
 def test_create_greeting_strings_greets_all_names_in_list():
     test_list = ["Paul", "Joe", "Hannah", "Alex", "Harrison", "Simon", "Kyle"]
     expected_result = [
@@ -81,31 +76,31 @@ There is no existing code for you to refactor, instead you should solve `increme
 """
 
 def increment_even_numbers(number_list):
-    pass
+    return [number + 1 if number % 2 == 0 else number for number in number_list]    
 
 
-@skip_test
+@run_test
 def test_increment_even_numbers_return_empty_list():
     assert increment_even_numbers([]) == [], format_err_msg(
         [], increment_even_numbers([])
     )
 
 
-@skip_test
+@run_test
 def test_increment_even_numbers_increments_even_numbers():
     assert increment_even_numbers([2, 4, 6]) == [3, 5, 7], format_err_msg(
         [3, 5, 7], increment_even_numbers([2, 4, 6])
     )
 
 
-@skip_test
+@run_test
 def test_increment_even_numbers_ignores_odd_numbers():
     assert increment_even_numbers([1, 3, 5]) == [1, 3, 5], format_err_msg(
         [1, 3, 5], increment_even_numbers([1, 3, 5])
     )
 
 
-@skip_test
+@run_test
 def test_increment_even_numbers_mixed_even_and_odd():
     assert increment_even_numbers([1, 2, 3, 4, 5]) == [
         1,

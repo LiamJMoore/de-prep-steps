@@ -10,12 +10,13 @@ from test_api.checks import run_test, skip_test, format_err_msg
 
 def confused_greeting(names):
 
-    confused_shouts = {}
+    confused_shouts = { 
+        for name in names:
+        confused_shouts.append(name + "? !")
 
-    for name in names:
-        confused_shouts.append(word + "? !")
+    return confused_shouts
+    }
 
-    return confused_shoots
 
 
 @run_test
